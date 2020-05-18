@@ -5,8 +5,8 @@ import { getRandomColor } from "../utils";
 
 // store state 값을 어떻게 가져올지 설정한다.
 const mapStateProps = state => ({
-    color: state.color,
-    number: state.number
+    color: state.colorData.color,
+    number: state.numberData.number
 });
 
 // dispatch 함수들의 객체를 설정한다.
