@@ -5,7 +5,7 @@ import CounterList from "../components/CounterList";
 
 // store state 값을 어떻게 가져올지 설정한다.
 const mapStateProps = (state) => ({
-  counters: state.counters,
+  counters: state.get('counters')
 });
 
 // dispatch 함수들의 객체를 설정한다.
