@@ -6,19 +6,31 @@
 */
 import * as types from './ActionTypes';
 
-export const increment = () => ({
-    type: types.INCREMENT
+export const create = (color) => ({
+    type: types.CREATE,
+    color
+})
+
+export const remove = () => ({
+    type: types.REMOVE
+})
+
+export const increment = (index) => ({
+    type: types.INCREMENT,
+    index
 });
 
-export const decrement = () => ({
-    type: types.DECREMENT
+export const decrement = (index) => ({
+    type: types.DECREMENT,
+    index
 });
 
 // 더블클릭을 하면, 색이 랜덤으로 변하지만, 액션을 rendomizeColor 이런 식으로 만들면 안된다.
 // 리듀서는 순수함수여야 하기 때문.
 // 따라서 파라미터로 color를 받으면 동일한 값을 리턴해줘야 한다.
-export const setColor = (color) => ({
+export const setColor = (index, color) => ({
     type: types.SET_COLOR,
+    index,
     color
 });
 

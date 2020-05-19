@@ -1,0 +1,31 @@
+.ButtonWrapper {
+  display: flex;
+  .btn {
+    display: flex;
+
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .create {
+    background-color: #37b24d;
+    &:hover {
+      background-color: #40c057;
+    }
+  }
+
+  .remove {
+    background-color: #f03e3e;
+
+    &:hover {
+      background-color: #fa5252;
+    }
+  }
+}

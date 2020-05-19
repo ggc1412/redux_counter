@@ -19,3 +19,7 @@
   user-select: none;
   transition: background-color 0.75s;
 }
+
+.Counter + .Counter {
+  margin-left: 1rem;
+}
