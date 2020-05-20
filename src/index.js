@@ -5,7 +5,7 @@ import App from './containers/App';
 
 // store 만들기
 // store를 생성하여 리듀서에 연결한다.
-import reducers from './reducers';
+import reducers from './modules';
 import { createStore } from 'redux';
 /*
   [Provider 컴포넌트]

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import * as actions from "../actions/index";
+import * as actions from "../modules";
 import { getRandomColor } from "../utils";
 import CounterList from "../components/CounterList";
 
@@ -14,7 +14,8 @@ const mapDispatchProps = (dispatch) => ({
   onDecrement: (index) => dispatch(actions.decrement(index)),
   onSetColor: (index) => {
     const color = getRandomColor();
-    dispatch(actions.setColor(index, color));
+    // createAction에서 payload에 객체로 넣어줘야하기 때문에 객체 형태로 집어 넣는다. 
+    dispatch(actions.setColor({index, color}));
   },
 });
 
